@@ -60,3 +60,8 @@ Install dependencies and run the FastAPI app locally.
 Image is also pushed to GCP Container Registry
 Final Endpoints in Cloud Run are
 https://flower-count-api-79045011025.us-central1.run.app
+
+## Improvements to be Considered:
+- In future will have to implement a OAUTH 2.0 or SAML on top of this app to improve security on the endpoint
+- The current Endpoint works on a Symmetric Key. This will be migrated to GOOGLE SECRET MANAGER or AWS SECRET MANAGER to abstract the keys.
+- The Docker registry now holds a raw copy of private key, but the image is airgapped so no worries as of now but would have to move that to SECRET MANAGER as well.
