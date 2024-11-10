@@ -1,0 +1,329 @@
+{
+	"info": {
+		"_postman_id": "9ffb2ee1-cbec-4710-b512-1326212bcf25",
+		"name": "Flower Count API",
+		"description": "API to get flower count from images via URL or direct upload",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39630119",
+		"_collection_link": "https://speeding-sunset-625952.postman.co/workspace/Team-Workspace~a0df953a-fe8b-49bd-8fb9-560e3057c109/collection/39630119-9ffb2ee1-cbec-4710-b512-1326212bcf25?action=share&source=collection_link&creator=39630119"
+	},
+	"item": [
+		{
+			"name": "Infer from Upload",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "multipart/form-data",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/ragavendiranbalasubramanian/Documents/ARTEMIS-TASK/Artemis-Inference/test.jpg"
+						},
+						{
+							"key": "firebase_uid",
+							"value": "TFmPB6dgpZZDSbzUCMtGhyWkQ8t2",
+							"type": "text"
+						},
+						{
+							"key": "secret_key",
+							"value": "88a1fc2d2ac751709328b2f10d43d9f270eb08becb55a35362e93806f953ce0f",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://flower-count-api-79045011025.us-central1.run.app/infer-from-upload",
+					"protocol": "https",
+					"host": [
+						"flower-count-api-79045011025",
+						"us-central1",
+						"run",
+						"app"
+					],
+					"path": [
+						"infer-from-upload"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Infer from Upload",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/Users/ragavendiranbalasubramanian/Documents/ARTEMIS-TASK/Artemis-Inference/test.jpg"
+								},
+								{
+									"key": "firebase_uid",
+									"value": "TFmPB6dgpZZDSbzUCMtGhyWkQ8t2",
+									"type": "text"
+								},
+								{
+									"key": "secret_key",
+									"value": "88a1fc2d2ac751709328b2f10d43d9f270eb08becb55a35362e93806f953ce0f",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://flower-count-api-79045011025.us-central1.run.app/infer-from-upload",
+							"protocol": "https",
+							"host": [
+								"flower-count-api-79045011025",
+								"us-central1",
+								"run",
+								"app"
+							],
+							"path": [
+								"infer-from-upload"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "content-type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-Cloud-Trace-Context",
+							"value": "910fd0a4c178842251badf296656a1b7;o=1"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 10 Nov 2024 22:46:23 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Google Frontend"
+						},
+						{
+							"key": "Content-Length",
+							"value": "18"
+						},
+						{
+							"key": "Alt-Svc",
+							"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"flower_count\": 1\n}"
+				}
+			]
+		},
+		{
+			"name": "Infer from Firebase",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "plant_name",
+							"value": "Bean Plant",
+							"type": "text"
+						},
+						{
+							"key": "firebase_uid",
+							"value": "TFmPB6dgpZZDSbzUCMtGhyWkQ8t2",
+							"type": "text"
+						},
+						{
+							"key": "secret_key",
+							"value": "88a1fc2d2ac751709328b2f10d43d9f270eb08becb55a35362e93806f953ce0f",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://flower-count-api-79045011025.us-central1.run.app/infer-from-firebase",
+					"protocol": "https",
+					"host": [
+						"flower-count-api-79045011025",
+						"us-central1",
+						"run",
+						"app"
+					],
+					"path": [
+						"infer-from-firebase"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "local",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "plant_name",
+									"value": "Bean Plant",
+									"type": "text"
+								},
+								{
+									"key": "firebase_uid",
+									"value": "TFmPB6dgpZZDSbzUCMtGhyWkQ8t2",
+									"type": "text"
+								},
+								{
+									"key": "secret_key",
+									"value": "88a1fc2d2ac751709328b2f10d43d9f270eb08becb55a35362e93806f953ce0f",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/infer-from-firebase",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"infer-from-firebase"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "date",
+							"value": "Sun, 10 Nov 2024 16:04:53 GMT"
+						},
+						{
+							"key": "server",
+							"value": "uvicorn"
+						},
+						{
+							"key": "content-length",
+							"value": "1392"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"inference completed\",\n    \"results\": {\n        \"27cc3a7135cb925724a185e39bc4a18bc3b027b031878edbe2542afc14aee7af_IMG_0_jpg\": {\n            \"flower_count\": 2\n        },\n        \"27cc3a7135cb925724a185e39bc4a18bc3b027b031878edbe2542afc14aee7af_IMG_10_jpg\": {\n            \"flower_count\": 5\n        },\n        \"27cc3a7135cb925724a185e39bc4a18bc3b027b031878edbe2542afc14aee7af_IMG_11_jpg\": {\n            \"flower_count\": 2\n        },\n        \"27cc3a7135cb925724a185e39bc4a18bc3b027b031878edbe2542afc14aee7af_IMG_12_jpg\": {\n            \"flower_count\": 2\n        },\n        \"27cc3a7135cb925724a185e39bc4a18bc3b027b031878edbe2542afc14aee7af_IMG_13_jpg\": {\n            \"flower_count\": 3\n        },\n        \"27cc3a7135cb925724a185e39bc4a18bc3b027b031878edbe2542afc14aee7af_IMG_1_jpg\": {\n            \"flower_count\": 2\n        },\n        \"27cc3a7135cb925724a185e39bc4a18bc3b027b031878edbe2542afc14aee7af_IMG_2_jpg\": {\n            \"flower_count\": 2\n        },\n        \"27cc3a7135cb925724a185e39bc4a18bc3b027b031878edbe2542afc14aee7af_IMG_3_jpg\": {\n            \"flower_count\": 1\n        },\n        \"27cc3a7135cb925724a185e39bc4a18bc3b027b031878edbe2542afc14aee7af_IMG_4_jpg\": {\n            \"flower_count\": 5\n        },\n        \"27cc3a7135cb925724a185e39bc4a18bc3b027b031878edbe2542afc14aee7af_IMG_5_jpg\": {\n            \"flower_count\": 6\n        },\n        \"27cc3a7135cb925724a185e39bc4a18bc3b027b031878edbe2542afc14aee7af_IMG_6_jpg\": {\n            \"flower_count\": 8\n        },\n        \"27cc3a7135cb925724a185e39bc4a18bc3b027b031878edbe2542afc14aee7af_IMG_7_jpg\": {\n            \"flower_count\": 7\n        },\n        \"27cc3a7135cb925724a185e39bc4a18bc3b027b031878edbe2542afc14aee7af_IMG_8_jpg\": {\n            \"flower_count\": 3\n        },\n        \"27cc3a7135cb925724a185e39bc4a18bc3b027b031878edbe2542afc14aee7af_IMG_9_jpg\": {\n            \"flower_count\": 0\n        }\n    }\n}"
+				},
+				{
+					"name": "CLOUD INFERENCE",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "plant_name",
+									"value": "Bean Plant",
+									"type": "text"
+								},
+								{
+									"key": "firebase_uid",
+									"value": "TFmPB6dgpZZDSbzUCMtGhyWkQ8t2",
+									"type": "text"
+								},
+								{
+									"key": "secret_key",
+									"value": "88a1fc2d2ac751709328b2f10d43d9f270eb08becb55a35362e93806f953ce0f",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://flower-count-api-79045011025.us-central1.run.app/infer-from-firebase",
+							"protocol": "https",
+							"host": [
+								"flower-count-api-79045011025",
+								"us-central1",
+								"run",
+								"app"
+							],
+							"path": [
+								"infer-from-firebase"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "content-type",
+							"value": "application/json"
+						},
+						{
+							"key": "X-Cloud-Trace-Context",
+							"value": "311326d3d670267cebdd42fe4374139a;o=1"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 10 Nov 2024 22:48:50 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Google Frontend"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1392"
+						},
+						{
+							"key": "Alt-Svc",
+							"value": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"status\": \"inference completed\",\n    \"results\": {\n        \"27cc3a7135cb925724a185e39bc4a18bc3b027b031878edbe2542afc14aee7af_IMG_0_jpg\": {\n            \"flower_count\": 2\n        },\n        \"27cc3a7135cb925724a185e39bc4a18bc3b027b031878edbe2542afc14aee7af_IMG_10_jpg\": {\n            \"flower_count\": 5\n        },\n        \"27cc3a7135cb925724a185e39bc4a18bc3b027b031878edbe2542afc14aee7af_IMG_11_jpg\": {\n            \"flower_count\": 2\n        },\n        \"27cc3a7135cb925724a185e39bc4a18bc3b027b031878edbe2542afc14aee7af_IMG_12_jpg\": {\n            \"flower_count\": 2\n        },\n        \"27cc3a7135cb925724a185e39bc4a18bc3b027b031878edbe2542afc14aee7af_IMG_13_jpg\": {\n            \"flower_count\": 3\n        },\n        \"27cc3a7135cb925724a185e39bc4a18bc3b027b031878edbe2542afc14aee7af_IMG_1_jpg\": {\n            \"flower_count\": 2\n        },\n        \"27cc3a7135cb925724a185e39bc4a18bc3b027b031878edbe2542afc14aee7af_IMG_2_jpg\": {\n            \"flower_count\": 2\n        },\n        \"27cc3a7135cb925724a185e39bc4a18bc3b027b031878edbe2542afc14aee7af_IMG_3_jpg\": {\n            \"flower_count\": 1\n        },\n        \"27cc3a7135cb925724a185e39bc4a18bc3b027b031878edbe2542afc14aee7af_IMG_4_jpg\": {\n            \"flower_count\": 5\n        },\n        \"27cc3a7135cb925724a185e39bc4a18bc3b027b031878edbe2542afc14aee7af_IMG_5_jpg\": {\n            \"flower_count\": 6\n        },\n        \"27cc3a7135cb925724a185e39bc4a18bc3b027b031878edbe2542afc14aee7af_IMG_6_jpg\": {\n            \"flower_count\": 8\n        },\n        \"27cc3a7135cb925724a185e39bc4a18bc3b027b031878edbe2542afc14aee7af_IMG_7_jpg\": {\n            \"flower_count\": 7\n        },\n        \"27cc3a7135cb925724a185e39bc4a18bc3b027b031878edbe2542afc14aee7af_IMG_8_jpg\": {\n            \"flower_count\": 3\n        },\n        \"27cc3a7135cb925724a185e39bc4a18bc3b027b031878edbe2542afc14aee7af_IMG_9_jpg\": {\n            \"flower_count\": 0\n        }\n    }\n}"
+				}
+			]
+		}
+	]
+}
