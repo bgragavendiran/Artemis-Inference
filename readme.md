@@ -61,6 +61,12 @@ Image is also pushed to GCP Container Registry
 Final Endpoints in Cloud Run are
 https://flower-count-api-79045011025.us-central1.run.app
 
+All requests are CORS blocked to https://main.d3adydml7r2i0r.amplifyapp.com
+API only works when hit from the live site.
+
+### ARCHITECTURE
+![artemis.drawio.png](artemis.drawio.png)
+
 ## Improvements to be Considered:
 - In future will have to implement a OAUTH 2.0 or SAML on top of this app to improve security on the endpoint
 - The current Endpoint works on a Symmetric Key. This will be migrated to GOOGLE SECRET MANAGER or AWS SECRET MANAGER to abstract the keys.

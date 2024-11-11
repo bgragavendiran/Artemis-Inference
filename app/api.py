@@ -1,4 +1,5 @@
 from fastapi import FastAPI, File, UploadFile, Form, HTTPException
+from fastapi.middleware.cors import CORSMiddleware  # New import
 from pydantic import BaseModel
 from transformers import DetrForObjectDetection, DetrImageProcessor
 from firebase_admin import auth, db, initialize_app, credentials
@@ -13,6 +14,22 @@ initialize_app(cred, {"databaseURL": "https://artemis-f901d-default-rtdb.asia-so
 
 # Initialize FastAPI and Model
 app = FastAPI()
+
+
+# Add CORS Middleware
+origins = [
+    "https://main.d3adydml7r2i0r.amplifyapp.com",  # Add your React app's domain here
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,  # Allows requests from this origin
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all HTTP methods
+    allow_headers=["*"],  # Allows all headers
+)
+
+
 model = DetrForObjectDetection.from_pretrained("smutuvi/flower_count_model")
 processor = DetrImageProcessor.from_pretrained("smutuvi/flower_count_model")
 
